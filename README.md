@@ -15,6 +15,4 @@ Thank you for using FangEngine, and good luck with your next project!
 You can view examples of games built in the engine over on [Itch.IO](https://cpsuperstore.itch.io/)
 
 ## Pricing
-When your game starts making money, we ask that you leave us an 8% donation of whatever you make from using our engine. 
-
-This helps to keep the website free, and development going.
+If you would like, you can leave a donation to help keep development of the engine going. Any donations are greatly appreciated.
