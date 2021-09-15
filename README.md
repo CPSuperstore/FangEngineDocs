@@ -7,7 +7,7 @@ To get started, simply run the following command in your terminal:
 pip install FangEngine
 ```
 
-Now that everything is installed, you can check out the [FangEngine Documentation](https://github.com/CPSuperstore/FangEngineDocs/blob/master/README.md) or the [Issue Tracker](https://github.com/CPSuperstore/FangEngine/issues)
+Now that everything is installed, you can check out the [FangEngine Documentation](https://github.com/CPSuperstore/FangEngineDocs/wiki) or the [Issue Tracker](https://github.com/CPSuperstore/FangEngine/issues)
 
 Thank you for using FangEngine, and good luck with your next project!
 
