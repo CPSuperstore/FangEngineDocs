@@ -11,6 +11,9 @@ Now that everything is installed, you can check out the [FangEngine Documentatio
 
 Thank you for using FangEngine, and good luck with your next project!
 
+## Documentation
+This wiki contains instructions on performing specific tasks. For the full documentation, please visit the [GitHub Pages](https://cpsuperstore.github.io/FangEngineDocs/index.html).
+
 ## Examples
 You can view examples of games built in the engine over on [Itch.IO](https://cpsuperstore.itch.io/)
 
