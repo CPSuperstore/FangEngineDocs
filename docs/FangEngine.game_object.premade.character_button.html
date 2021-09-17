@@ -9,87 +9,110 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
         <style>
+            :root {
+                --sidebar: #343a40;
+                --sidebar-hover: #22262a;
+                --sidebar-text: #9a9da0;
+                --content: #9a9da0;
+                --content-text: #343a40;
+            }
+            a{
+                color: #357929;
+            }
+            a:hover{
+                color: #295e20;
+            }
             #sidebar-wrapper .sidebar-heading {
                 padding: 0.875rem 1.25rem;
                 font-size: 1.2rem;
             }
+            .list-group-item:hover {
+                background-color: var(--sidebar-hover) !important;
+            }
+            code{
+                color: var(--content-text);
+            }
+            blockquote{
+                font-size: large;
+            }
         </style>
     </head>
-    <body>
+    <body style="background-color: var(--content); color: var(--content-text) !important;">
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-            <div class="border-end" id="sidebar-wrapper" style="position: fixed">
+            <div class="border-end" id="sidebar-wrapper" style="position: fixed; width: 440px; background-color: var(--sidebar); color: var(--sidebar-text) !important;">
                 <div class="sidebar-heading border-bottom">Fang Engine Documentation</div>
-                <div class="list-group list-group-flush" style="overflow-y: scroll; max-height: calc(100vh - 59px);">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
+                <input class="form-control" id="search" type="text" placeholder="Search..." style="background-color:  var(--sidebar); color: var(--sidebar-text) !important;" autocomplete="off">
+                <div class="list-group list-group-flush" style="overflow-y: scroll; height: calc(100vh - 96px);" id="sidebarItems">
+                    <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="index.html">Home</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.converter.angle.html">converter.angle</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.converter.angle.html">converter.angle</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.converter.color.html">converter.color</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.converter.color.html">converter.color</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.display_methods.sprite_sheet.html">display_methods.sprite_sheet</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.display_methods.sprite_sheet.html">display_methods.sprite_sheet</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.hud.hud_base.html">game_object.premade.hud.hud_base</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.hud.hud_base.html">game_object.premade.hud.hud_base</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.hud.variable_hud.html">game_object.premade.hud.variable_hud</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.hud.variable_hud.html">game_object.premade.hud.variable_hud</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.character.html">game_object.premade.character</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.character.html">game_object.premade.character</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.character_button.html">game_object.premade.character_button</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.character_button.html">game_object.premade.character_button</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.rotatable_object.html">game_object.premade.rotatable_object</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.rotatable_object.html">game_object.premade.rotatable_object</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.rotatable_sprite_sheet.html">game_object.premade.rotatable_sprite_sheet</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.rotatable_sprite_sheet.html">game_object.premade.rotatable_sprite_sheet</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.rotatable_text.html">game_object.premade.rotatable_text</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.rotatable_text.html">game_object.premade.rotatable_text</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.premade.text.html">game_object.premade.text</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.premade.text.html">game_object.premade.text</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.game_object.html">game_object.game_object</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.game_object.html">game_object.game_object</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.game_object.hitbox.html">game_object.hitbox</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.game_object.hitbox.html">game_object.hitbox</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.grid_screen.base_grid_screen.html">screen_manager.grid_screen.base_grid_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.grid_screen.base_grid_screen.html">screen_manager.grid_screen.base_grid_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.rotatable_screen.rotatable_screen_base.html">screen_manager.rotatable_screen.rotatable_screen_base</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.rotatable_screen.rotatable_screen_base.html">screen_manager.rotatable_screen.rotatable_screen_base</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.terminal_screen.base_console_screen.html">screen_manager.terminal_screen.base_console_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.terminal_screen.base_console_screen.html">screen_manager.terminal_screen.base_console_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.terminal_screen.base_terminal_screen.html">screen_manager.terminal_screen.base_terminal_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.terminal_screen.base_terminal_screen.html">screen_manager.terminal_screen.base_terminal_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.terminal_screen.system_console_screen.html">screen_manager.terminal_screen.system_console_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.terminal_screen.system_console_screen.html">screen_manager.terminal_screen.system_console_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.base_screen.html">screen_manager.base_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.base_screen.html">screen_manager.base_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.camera.html">screen_manager.camera</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.camera.html">screen_manager.camera</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.dialog_box.html">screen_manager.dialog_box</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.dialog_box.html">screen_manager.dialog_box</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.image_dialog_box.html">screen_manager.image_dialog_box</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.image_dialog_box.html">screen_manager.image_dialog_box</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.object_screen.html">screen_manager.object_screen</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.object_screen.html">screen_manager.object_screen</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.screen_manager.screen_manager.html">screen_manager.screen_manager</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.screen_manager.screen_manager.html">screen_manager.screen_manager</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.store.asset_store.asset_store.html">store.asset_store.asset_store</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.store.asset_store.asset_store.html">store.asset_store.asset_store</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.store.asset_store.image_asset_store.html">store.asset_store.image_asset_store</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.store.asset_store.image_asset_store.html">store.asset_store.image_asset_store</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.store.asset_store.sound_asset_store.html">store.asset_store.sound_asset_store</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.store.asset_store.sound_asset_store.html">store.asset_store.sound_asset_store</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.store.control_store.html">store.control_store</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.store.control_store.html">store.control_store</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.store.language_store.html">store.language_store</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.store.language_store.html">store.language_store</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.error_log.html">error_log</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.error_log.html">error_log</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.exceptions.html">exceptions</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.exceptions.html">exceptions</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.graphics_options.html">graphics_options</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.graphics_options.html">graphics_options</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.image_utils.html">image_utils</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.image_utils.html">image_utils</a>
                     
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="FangEngine.status_codes.html">status_codes</a>
+                        <a style="background-color: var(--sidebar); color: var(--sidebar-text) !important;" class="list-group-item list-group-item-action p-3" href="FangEngine.status_codes.html">status_codes</a>
                     
                 </div>
             </div>
@@ -152,5 +175,16 @@
 
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $("#search").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#sidebarItems *").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
     </body>
 </html>
