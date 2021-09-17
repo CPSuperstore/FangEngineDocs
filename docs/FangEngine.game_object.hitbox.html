@@ -95,56 +95,59 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.game_object.hitbox</code></h1>
+<blockquote>This module contains the hitbox object</blockquote>
 <h2>Class <code>Hitbox</code></h2>
+<blockquote>    Represents a rectangular hitbox of an object<br></blockquote>
 <h3><code>__init__(self, x: float, y: float, w: float, h: float)</code></h3>
-
+<blockquote>        <b>Parameter</b> x:<br><b>Parameter</b> y:<br><b>Parameter</b> w:<br><b>Parameter</b> h:<br></blockquote>
 <h3><code>__repr__(self)</code></h3>
 
 <h3><code>area(self) -> float</code></h3>
-
+<blockquote>        Returns the area of the hitbox<br></blockquote>
 <h3><code>bottom_left(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the bottom left position of the hitbox<br></blockquote>
 <h3><code>bottom_right(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the bottom right position of the hitbox<br></blockquote>
 <h3><code>diagonal(self)</code></h3>
-
+<blockquote>        Returns the diagonal length of the hitbox<br></blockquote>
 <h3><code>draw_hitbox(self, buffer: Surface, color: typing.Tuple[int, int, int] = (255, 255, 255), width: int = 2)</code></h3>
-
+<blockquote>        Draws the hitbox to the specified buffer<br><b>Parameter</b> buffer:<br><b>Parameter</b> color:<br><b>Parameter</b> width: the line width to draw the hitbox (use 0 to fill)<br></blockquote>
 <h3><code>is_hitbox_colliding(self, hitbox: Hitbox) -> bool</code></h3>
-
+<blockquote>        Determines if the specified hitbox is colliding with the hitbox<br></blockquote>
 <h3><code>is_point_colliding(self, x: float, y: float) -> bool</code></h3>
-
+<blockquote>        Determines if the specified point is colliding with the hitbox<br></blockquote>
 <h3><code>perimeter(self) -> float</code></h3>
-
+<blockquote>        Returns the perimeter of the hitbox<br></blockquote>
 <h3><code>top_left(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the top left position of the hitbox<br></blockquote>
 <h3><code>top_right(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the to _right position of the hitbox<br></blockquote>
 <h2>Class <code>BoundHitbox</code></h2>
+<blockquote>    A bound hitbox will follow and scale along with a derivative of the GameObject class<br></blockquote>
 <h3><code>__init__(self, child: game_object.GameObject)</code></h3>
-
+<blockquote>        <b>Parameter</b> child: the object to bind the hitbox to<br></blockquote>
 <h3><code>__repr__(self)</code></h3>
 
 <h3><code>area(self) -> float</code></h3>
-
+<blockquote>        Returns the area of the hitbox<br></blockquote>
 <h3><code>bottom_left(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the bottom left position of the hitbox<br></blockquote>
 <h3><code>bottom_right(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the bottom right position of the hitbox<br></blockquote>
 <h3><code>diagonal(self)</code></h3>
-
+<blockquote>        Returns the diagonal length of the hitbox<br></blockquote>
 <h3><code>draw_hitbox(self, buffer: Surface, color: typing.Tuple[int, int, int] = (255, 255, 255), width: int = 2)</code></h3>
-
+<blockquote>        Draws the hitbox to the specified buffer<br><b>Parameter</b> buffer:<br><b>Parameter</b> color:<br><b>Parameter</b> width: the line width to draw the hitbox (use 0 to fill)<br></blockquote>
 <h3><code>is_hitbox_colliding(self, hitbox: Hitbox) -> bool</code></h3>
-
+<blockquote>        Determines if the specified hitbox is colliding with the hitbox<br></blockquote>
 <h3><code>is_point_colliding(self, x: float, y: float) -> bool</code></h3>
-
+<blockquote>        Determines if the specified point is colliding with the hitbox<br></blockquote>
 <h3><code>perimeter(self) -> float</code></h3>
-
+<blockquote>        Returns the perimeter of the hitbox<br></blockquote>
 <h3><code>top_left(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the top left position of the hitbox<br></blockquote>
 <h3><code>top_right(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the to _right position of the hitbox<br></blockquote>
             </div>
         </div>
     </body>

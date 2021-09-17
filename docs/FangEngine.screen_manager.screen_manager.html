@@ -95,27 +95,29 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.screen_manager.screen_manager</code></h1>
+<blockquote>This module contains the ScreenManager. The backbone of the FangEngine</blockquote>
 <h2>Class <code>ScreenManager</code></h2>
+<blockquote>    This module contains the ScreenManager. The backbone of the FangEngine<br>The ScreenManager is responsible for handling all screens, scaling them, switching them and dispatching all events<br></blockquote>
 <h3><code>__init__(self, screen_w: int = 800, screen_h: int = 450, fullscreen: bool = False, monitor: int = 0, show_cursor: bool = True, caption: str = FangEngine Application, framerate_cap: int = 60, icon_path: str = None)</code></h3>
-
+<blockquote>        Note that this method allows you to set fullscreen, monitor and framerate_cap.<br>It is best practice to allow the user choose this at runtime. This can be done by calling show_graphics_options<br><b>Parameter</b> screen_w: The width of the working space. This will be scaled based on user window interaction<br><b>Parameter</b> screen_h: The height of the working space. This will be scaled based on user window interaction<br><b>Parameter</b> fullscreen:<br><b>Parameter</b> monitor:<br><b>Parameter</b> show_cursor:<br><b>Parameter</b> caption: The title for the window<br><b>Parameter</b> framerate_cap:<br><b>Parameter</b> icon_path: the path to the image for the window icon<br></blockquote>
 <h3><code>add_instantiated_screen(self, screen_obj: screen.BaseScreen) -> ScreenManager</code></h3>
-
+<blockquote>        Adds an already instantiated screen<br>WARNING: DO NOT INSTANTIATE A SCREEN OBJECT ON YOUR OWN. Let the engine handle it<br><b>Parameter</b> screen_obj:<br><b>Returns</b> this object so this statement can be chained<br></blockquote>
 <h3><code>add_screen(self, name: str, screen_cls: screen.BaseScreen.__class__, args, kwargs) -> ScreenManager</code></h3>
-
+<blockquote>        Adds a new screen to the manager<br><b>Parameter</b> name: the reference name of the screen<br><b>Parameter</b> screen_cls: a reference to the class of the screen. It MUST inherit from BaseScreen<br><b>Parameter</b> args:<br><b>Parameter</b> kwargs:<br><b>Returns</b> this object so this statement can be chained<br></blockquote>
 <h3><code>change_screen(self, name: str) -> ScreenManager</code></h3>
-
+<blockquote>        Changes the currently selected screen<br><b>Returns</b> this object so this statement can be chained<br></blockquote>
 <h3><code>clear_event_queue()</code></h3>
-
+<blockquote>        Clears the event queue<br><b>Returns</b><br></blockquote>
 <h3><code>draw_buffer(self)</code></h3>
-
+<blockquote>        Scales and draws the buffer (which is passed to all objects for them to do their drawing with) to the window<br></blockquote>
 <h3><code>scale_coords(self, pos: typing.Tuple[float, float]) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Scales coordinates relative to the scaling of the window<br></blockquote>
 <h3><code>show_graphics_options(self, caption: str = None, icon_path: str = None) -> ScreenManager</code></h3>
-
+<blockquote>        This method allows the users to select their graphics options<br><b>Parameter</b> caption: default is to take the value set in the constructor<br><b>Parameter</b> icon_path: default is to take the value set in the constructor<br><b>Returns</b> this object so this statement can be chained<br></blockquote>
 <h3><code>show_screen(self, initial_screen: str = None) -> ScreenManager</code></h3>
-
+<blockquote>        Launches the GUI window. It is best practice to call "start" method instead which will handle this<br><b>Parameter</b> initial_screen: the screen to start on<br><b>Returns</b> this object so this statement can be chained<br></blockquote>
 <h3><code>start(self, initial_screen: str = None) -> StatusCodes</code></h3>
-
+<blockquote>        Starts the application<br><b>Parameter</b> initial_screen: the screen to start the game on<br><b>Returns</b> the status code as to why the game terminated. This will be a value from the StatusCodes enum<br></blockquote>
 <h3><code>update_scale_factor(self)</code></h3>
 
             </div>

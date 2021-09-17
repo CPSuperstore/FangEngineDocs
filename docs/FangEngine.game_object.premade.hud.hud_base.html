@@ -95,31 +95,35 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.game_object.premade.hud.hud_base</code></h1>
+<blockquote>This module contains the base HUD (Heads Up Display) object</blockquote>
 <h2>Class <code>HUDBase</code></h2>
+<blockquote>    This class is a parent class for all HUD (Heads Up Display) objects<br>There is no requirement to use this base for a HUD<br></blockquote>
 <h3><code>__init__(self, screen_parent, x: float, y: float, w: float, h: float, font = <class 'pygame.font.Font'>, background_color: tuple = (255, 255, 255), left_padding: int = 5, middle_padding: int = 10)</code></h3>
-
+<blockquote>        <b>Parameter</b> screen_parent: the screen which contains this object<br><b>Parameter</b> x: x draw position<br><b>Parameter</b> y: y draw position<br><b>Parameter</b> w: hud width<br><b>Parameter</b> h: hud height<br><b>Parameter</b> font: the Pygame font to render text in<br><b>Parameter</b> background_color: the background color of the HUD<br><b>Parameter</b> left_padding: the padding between the left of the screen and the first item<br><b>Parameter</b> middle_padding: the padding between different elements in the HUD<br></blockquote>
 <h3><code>add_image(self, name: str, ref_name: str = None)</code></h3>
-
+<blockquote>        This method adds any image from the image store to the HUD<br>The image will be scaled down to be as tall as the HUD<br><b>Parameter</b> name:<br><b>Parameter</b> ref_name: a name to uniquely reference this HUD element if you need to access/replace the text later<br>If not specified you will not be able to access the text<br></blockquote>
 <h3><code>add_surface(self, surf: Surface, ref_name: str = None)</code></h3>
-
+<blockquote>        This method adds any Pygame surface to the HUD<br>The surface will be scaled down to be as tall as the HUD<br><b>Parameter</b> surf:<br><b>Parameter</b> ref_name: a name to uniquely reference this HUD element if you need to access/replace the text later<br>If not specified you will not be able to access the text<br></blockquote>
 <h3><code>add_text(self, text: str, color = (0, 0, 0), ref_name: str = None)</code></h3>
-
+<blockquote>        This method adds text to the HUD<br><b>Parameter</b> text:<br><b>Parameter</b> color:<br><b>Parameter</b> ref_name: a name to uniquely reference this HUD element if you need to access/replace the text later<br>If not specified you will not be able to access the text<br></blockquote>
 <h3><code>broadcast_message(self, message: typing.Union[list, tuple, str])</code></h3>
-
+<blockquote>        Broadcasts a message to all other objects on this screen<br><b>Parameter</b> message: the message to send<br></blockquote>
 <h3><code>check_collision(self)</code></h3>
-
+<blockquote>        Causes this object to check for collisions with other objects<br>If a collision is detected, the on_collide event of both objects will be triggered<br></blockquote>
+<h3><code>class_name(self) -> str</code></h3>
+<blockquote>        Returns the name of the class<br></blockquote>
 <h3><code>convert_coords(self, x: float, y: float) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Scales coordinates with respect to the the scaling of the screen<br>This is especially useful for interacting with the mouse directly<br></blockquote>
 <h3><code>handle_input(self, keys: list, mouse: tuple, delta_t: float)</code></h3>
-
+<blockquote>        This event allows the handling of user input<br>This event is triggered every frame<br><b>Parameter</b> keys: A list of keys and their states. The index of a key is its ASCII value (use pygame constants)<br><b>Parameter</b> mouse: the state of the mouse buttons<br><b>Parameter</b> delta_t: the amount of time (in seconds) that has passed since the last frame<br></blockquote>
 <h3><code>on_click(self, pos: tuple, button: int)</code></h3>
-
+<blockquote>        Run this method to simulate a click on the HUD<br>Override this method to change the click event<br>If a HUD item is clicked, the on_hud_item_click event will be triggered<br></blockquote>
 <h3><code>on_collide(self, other: GameObject)</code></h3>
 
 <h3><code>on_create(self, args, kwargs)</code></h3>
-
+<blockquote>        This event is triggered when this object is created<br>It is run once and only once<br></blockquote>
 <h3><code>on_hud_item_click(self, ref_name: str)</code></h3>
-
+<blockquote>        This event is triggered when a HUD item is clicked<br>Note that even non-named items will trigger this event. Their name will be a float.<br><b>Parameter</b> ref_name: the name of the HUD item (set when added)<br></blockquote>
 <h3><code>on_joystick_axis_motion(self, joystick, axis, value)</code></h3>
 
 <h3><code>on_joystick_ball_motion(self, joystick, ball, rel)</code></h3>
@@ -134,8 +138,8 @@
 
 <h3><code>on_key_up(self, key, mod)</code></h3>
 
-<h3><code>on_message_receive(self, message: str, sender)</code></h3>
-
+<h3><code>on_message_receive(self, message: typing.Union[list, tuple, str], sender)</code></h3>
+<blockquote>        This event is run when another object on the same screen broadcasts a message<br><b>Parameter</b> message:<br><b>Parameter</b> sender: the sender of the message<br></blockquote>
 <h3><code>on_mouse_button_down(self, pos, button)</code></h3>
 
 <h3><code>on_mouse_button_up(self, pos, button)</code></h3>
@@ -149,13 +153,13 @@
 <h3><code>on_screen_leave(self, next_screen: str)</code></h3>
 
 <h3><code>remove_item(self, ref_name: str) -> Surface</code></h3>
-
+<blockquote>        Removes the specified item from the HUD<br><b>Parameter</b> ref_name: the name of the HUD item (set when added)<br></blockquote>
 <h3><code>render(self, buffer: Surface)</code></h3>
-
+<blockquote>        Draws the HUD and all contained elements to the specified buffer<br></blockquote>
 <h3><code>show_dialog_box(self, box: dialog_box.DialogBox.__class__, args, kwargs)</code></h3>
-
+<blockquote>        This method causes the screen to show a dialog box<br><b>Parameter</b> box: the class reference to the dialog box<br><b>Parameter</b> args:<br><b>Parameter</b> kwargs:<br></blockquote>
 <h3><code>update(self, delta_t: float)</code></h3>
-
+<blockquote>        This event is triggered every frame. This is where the main update code should go<br><b>Parameter</b> delta_t: the amount of time (in seconds) that has passed since the last frame<br></blockquote>
             </div>
         </div>
     </body>

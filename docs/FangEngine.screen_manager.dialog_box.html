@@ -95,41 +95,43 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.screen_manager.dialog_box</code></h1>
+<blockquote>This module contains the base dialog box class</blockquote>
 <h2>Class <code>DialogBox</code></h2>
+<blockquote>    This class is the class all dialog boxes must inherit from<br></blockquote>
 <h3><code>__init__(self, screen_parent: base_screen.BaseScreen, args, kwargs)</code></h3>
-
+<blockquote>        <b>Parameter</b> screen_parent:<br><b>Parameter</b> args:<br><b>Parameter</b> kwargs:<br></blockquote>
 <h3><code>__del__(self)</code></h3>
 
 <h3><code>broadcast_message(self, message: typing.Union[list, tuple, str], sender = None)</code></h3>
-
+<blockquote>        Broadcasts a message<br><b>Parameter</b> message:<br><b>Parameter</b> sender: default is this dialog box<br></blockquote>
 <h3><code>center_dialog_box(self)</code></h3>
-
+<blockquote>        Re-calculates the position to draw the dialog box in order to ensure it is centered<br><b>Returns</b><br></blockquote>
 <h3><code>center_mouse(self)</code></h3>
-
+<blockquote>        Moves the mouse cursor to the center of the screen<br></blockquote>
 <h3><code>center_mouse_x(self)</code></h3>
-
+<blockquote>        Moves the mouse cursor so it is centered along the x axis<br></blockquote>
 <h3><code>center_mouse_y(self)</code></h3>
-
+<blockquote>        Moves the mouse cursor so it is centered along the y axis<br></blockquote>
 <h3><code>close(self)</code></h3>
-
+<blockquote>        Closes this dialog box<br></blockquote>
 <h3><code>convert_coords(self, x: float, y: float) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        This method converts coordinates so (0, 0) is the top left corner of the dialog box, and not the window<br><b>Parameter</b> x:<br><b>Parameter</b> y:<br></blockquote>
 <h3><code>dialog_render(self, buffer: Surface)</code></h3>
-
+<blockquote>        This is the method to override for dialog box rendering<br></blockquote>
 <h3><code>draw_close_button(self)</code></h3>
-
+<blockquote>        This method is responsible for creating the close button<br>Once the buttoh has been drawn it does not need to be drawn again<br>(unless you want the appearance of the button to change)<br></blockquote>
 <h3><code>get_cursor_pos(self) -> typing.Tuple[float, float]</code></h3>
-
+<blockquote>        Returns the mouse cursor's position<br>The position is automatically scaled so this is the safest way to get the position<br></blockquote>
 <h3><code>get_size(self, screen_w: float, screen_h: float) -> tuple</code></h3>
-
+<blockquote>        This method must return the width and height of the dialog box<br>The screen size will be provided if you wish to make the box a scaled percentage of the screen<br><b>Parameter</b> screen_w:<br><b>Parameter</b> screen_h:<br><b>Returns</b> the size to make the dialog box<br></blockquote>
 <h3><code>handle_input(self, keys: list, mouse: tuple, delta_t: float)</code></h3>
 
 <h3><code>hide_mouse(self)</code></h3>
-
+<blockquote>        Hides the mouse cursor<br></blockquote>
 <h3><code>is_showing_dialog_box(self) -> bool</code></h3>
-
+<blockquote>        Returns if there are any dialog boxes currently being displayed<br></blockquote>
 <h3><code>on_create(self)</code></h3>
-
+<blockquote>        This event is triggered when the screen is created<br>It is run once and only once<br></blockquote>
 <h3><code>on_joystick_axis_motion(self, joystick, axis, value)</code></h3>
 
 <h3><code>on_joystick_ball_motion(self, joystick, ball, rel)</code></h3>
@@ -145,9 +147,9 @@
 <h3><code>on_key_up(self, key, mod)</code></h3>
 
 <h3><code>on_message_receive(self, message: str, sender)</code></h3>
-
+<blockquote>        This event is triggered whenever a message is sent<br><b>Parameter</b> message:<br><b>Parameter</b> sender: the object which broadcast the message<br></blockquote>
 <h3><code>on_mouse_button_down(self, pos, button)</code></h3>
-
+<blockquote>        This event is triggered when the box is clicked<br><b>Parameter</b> pos:<br><b>Parameter</b> button:<br><b>Returns</b><br></blockquote>
 <h3><code>on_mouse_button_up(self, pos, button)</code></h3>
 
 <h3><code>on_mouse_motion(self, pos, rel, buttons)</code></h3>
@@ -157,13 +159,13 @@
 <h3><code>on_screen_leave(self, next_screen: str)</code></h3>
 
 <h3><code>play_sound(self, sound: Sound, loops: int = 0, left: float = 1.0, right: float = 1.0)</code></h3>
-
+<blockquote>        Plays a sound<br><b>Parameter</b> sound: the Pygame Sound object to play<br><b>Parameter</b> loops:<br><b>Parameter</b> left: the left volume to play the sound (0-1)<br><b>Parameter</b> right: the right volume to play the sound (0-1)<br><br>For example, if left is 0 and right is 1, then the sound will only be played out of the right speaker/earphone<br></blockquote>
 <h3><code>render(self, buffer: Surface)</code></h3>
-
+<blockquote>        This method draws the dialog box to the specified buffer<br></blockquote>
 <h3><code>show_dialog_box(self, box: dialog_box.DialogBox.__class__, args, kwargs)</code></h3>
-
+<blockquote>        Shows a new dialog box<br><b>Parameter</b> box: the reference to the dialog box class to show<br><b>Parameter</b> args:<br><b>Parameter</b> kwargs:<br></blockquote>
 <h3><code>show_mouse(self)</code></h3>
-
+<blockquote>        Shows the mouse cursor<br></blockquote>
 <h3><code>update(self, delta_t: float)</code></h3>
 
             </div>

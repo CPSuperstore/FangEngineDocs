@@ -95,7 +95,9 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.store.asset_store.asset_store</code></h1>
+<blockquote>This module contains the asset store</blockquote>
 <h2>Class <code>AssetStore</code></h2>
+<blockquote>    This class is the base class for all asset stores<br>This class is a singleton so multiple instances will have no affect on performance<br></blockquote>
 <h3><code>__delitem__(self, key)</code></h3>
 
 <h3><code>__getitem__(self, item)</code></h3>
@@ -111,29 +113,29 @@
 <h3><code>__setitem__(self, key, value)</code></h3>
 
 <h3><code>count(self) -> int</code></h3>
-
+<blockquote>        Returns the number of assets in the store<br></blockquote>
 <h3><code>delete(self, name: str)</code></h3>
-
+<blockquote>        Deletes and returns the asset with the specified name<br></blockquote>
 <h3><code>get(self, name: str)</code></h3>
-
-<h3><code>get_all(self) -> typing.Dict[str, object]</code></h3>
-
+<blockquote>        Returns the asset with the specified name<br></blockquote>
+<h3><code>get_all(self, search: str = ) -> list</code></h3>
+<blockquote>        Returns everything in the asset store<br><b>Parameter</b> search: the text the names must start with (or blank for everything)<br><b>Returns</b> list of assets<br></blockquote>
 <h3><code>get_all_names(self, search: str = ) -> typing.List[str]</code></h3>
-
+<blockquote>        Returns every name of every asset in the store<br><b>Parameter</b> search: the text the names must start with (or blank for everything)<br><b>Returns</b> list of names of assets<br></blockquote>
 <h3><code>get_ignore_path(self, name: str)</code></h3>
 
 <h3><code>get_random(self, search: str = )</code></h3>
-
+<blockquote>        Returns a random asset in the store<br><b>Parameter</b> search: the text the names must start with (or blank for everything)<br></blockquote>
 <h3><code>get_random_name(self, search: str = ) -> str</code></h3>
-
+<blockquote>        Returns a random asset name in the store<br><b>Parameter</b> search: the text the names must start with (or blank for everything)<br></blockquote>
 <h3><code>load_asset(self, path: str)</code></h3>
-
+<blockquote>        Loads an asset into memory<br></blockquote>
 <h3><code>overload(self, path: str = None)</code></h3>
-
+<blockquote>        Reloads the assets<br>Note that this DOES NOT clear the current store. It simply overwrites whatever it finds<br>If a file is missing when the reload happens the original file will remain loaded<br><b>Parameter</b> path: optional path to reload from<br></blockquote>
 <h3><code>reload(self, path: str = None)</code></h3>
-
+<blockquote>        Reloads the assets<br>Note that this clears the current store and then loads everything<br>If a file is missing when the reload happens the file will NOT be loaded<br><b>Parameter</b> path: optional path to reload from<br></blockquote>
 <h3><code>set(self, name: str, asset: str)</code></h3>
-
+<blockquote>        Adds/overwrites the asset at the specified name<br><b>Parameter</b> name:<br><b>Parameter</b> asset: the asset<br></blockquote>
             </div>
         </div>
     </body>

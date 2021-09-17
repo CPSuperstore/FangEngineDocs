@@ -95,6 +95,7 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.converter.color</code></h1>
+<blockquote>This module handles the conversion of colors from any format to RGB (the units the engine uses)</blockquote>
 <h2>Enum <code>ColorNames</code></h2>
 <table class='table table-striped table-hover table-sm'><thead><tr><th>Key</th><th>Value</th></tr></thead><tbody>
 <tr><td>ALICE_BLUE</td><td>(240, 248, 255)</td></tr>
@@ -237,13 +238,13 @@
 <tr><td>YELLOW_GREEN</td><td>(154, 205, 50)</td></tr>
 </tbody></table>
 <h2>Function <code>rgb_color(r: int, g: int, b: int) -> typing.Tuple[int, int, int]</code></h2>
-
+<blockquote>    Converts RGB format to RGB. This function was included for completeness.<br></blockquote>
 <h2>Function <code>hex_color(color: str) -> typing.Tuple[int, int, int]</code></h2>
-
+<blockquote>    Converts HEX format to RGB<br>Can be in the format "#123456" OR "123456"<br></blockquote>
 <h2>Function <code>cmyk_color(c: int, m: int, y: int, k: int) -> typing.Tuple[int, int, int]</code></h2>
-
+<blockquote>    Converts CMYK format to RGB<br></blockquote>
 <h2>Function <code>named_color(name: typing.Union[FangEngine.converter.color.ColorNames, str])</code></h2>
-
+<blockquote>    Converts a color name to RGB based on the ColorNames enum<br></blockquote>
             </div>
         </div>
     </body>

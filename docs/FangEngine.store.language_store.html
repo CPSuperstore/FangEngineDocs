@@ -95,9 +95,11 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.store.language_store</code></h1>
+<blockquote>This module manages language and translations</blockquote>
 <h2>Function <code>get_system_lang() -> str</code></h2>
 <blockquote>    Returns the LCID (Locale Identifier)<br><br>A full list can be found here:<br>https://www.science.co.il/language/Locale-codes.php<br></blockquote>
 <h2>Class <code>LanguageStore</code></h2>
+<blockquote>    This singleton stores the game translations<br>Translations should be stored in assets/lang in JSON format<br></blockquote>
 <h3><code>__init__(self)</code></h3>
 
 <h3><code>__getitem__(self, item) -> str</code></h3>
@@ -111,9 +113,9 @@
 <h3><code>__repr__(self)</code></h3>
 
 <h3><code>reload_lang_file(self)</code></h3>
-
+<blockquote>        Reloads the language translations<br></blockquote>
 <h3><code>set_lang(self, code: str = None)</code></h3>
-
+<blockquote>        Sets the language translations to use<br><b>Parameter</b> code: the LCID to load. Default is the OS' LCID<br></blockquote>
             </div>
         </div>
     </body>

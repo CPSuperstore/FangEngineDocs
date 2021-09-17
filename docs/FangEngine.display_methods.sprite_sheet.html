@@ -95,16 +95,17 @@
             </div>
             <div id="page-content-wrapper" style="margin-left: 460px !important;">
                 <h1><code>FangEngine.display_methods.sprite_sheet</code></h1>
+<blockquote>This module contains the sprite sheet class for animated images</blockquote>
 <h2>Class <code>SpriteSheet</code></h2>
-<blockquote>    This class does things<br></blockquote>
+<blockquote>    This class represents a single sprite sheet<br>Animation moves from left to right and top to bottom<br></blockquote>
 <h3><code>__init__(self, image: str, tiles_wide: int, tiles_high: int, frames: int, speed: float = 0.1, scale_w: float = 1, scale_h: float = 1, color_key: typing.Tuple[int, int, int] = (255, 0, 255))</code></h3>
-<blockquote>        <b>Parameter</b> image:<br><b>Parameter</b> tiles_wide:<br><b>Parameter</b> tiles_high:<br><b>Parameter</b> frames:<br><b>Parameter</b> speed:<br><b>Parameter</b> scale_w:<br><b>Parameter</b> scale_h:<br><b>Parameter</b> color_key:<br></blockquote>
+<blockquote>        <b>Parameter</b> image: the name of the image to retrieve from the image store<br><b>Parameter</b> tiles_wide: the number of tiles wide in the animation<br><b>Parameter</b> tiles_high: the number of tiles high in the animation<br><b>Parameter</b> frames: the total number of frames in the animation<br>For example, in a 3x3 animation, if there are only 7 frames, then set this number to 7<br><b>Parameter</b> speed: the number of seconds to remain on each frame<br><b>Parameter</b> scale_w: the factor to scale the image horizontally<br><b>Parameter</b> scale_h: the factor to scale the image vertically.<br>While the default is 1, if None is provided, this will be set to scale_w<br><b>Parameter</b> color_key: an RGB color to be used as the invisible color (any color not included in any of the frames)<br></blockquote>
 <h3><code>get_current_image(self) -> Surface</code></h3>
-
+<blockquote>        Returns the current frame the animation is on<br></blockquote>
 <h3><code>image_at(self, x: float, y: float, w: float, h: float, color_key = None) -> Surface</code></h3>
-
+<blockquote>        Returns a subsection of the image<br>if color_key is not set, the color key of the spritesheet will be used instead<br></blockquote>
 <h3><code>render(self, buffer: Surface, x: float, y: float)</code></h3>
-<blockquote>        <b>Parameter</b> buffer:<br><b>Parameter</b> x:<br><b>Parameter</b> y:<br><b>Returns</b><br></blockquote>
+<blockquote>        Draws the sprite sheet to the specified buffer at the specified location<br></blockquote>
             </div>
         </div>
     </body>
