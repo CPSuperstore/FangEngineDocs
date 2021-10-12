@@ -16,3 +16,5 @@ You can view examples of games built in the engine over on [Itch.IO](https://cps
 
 ## Donation
 If you would like, you can leave a donation to help keep development of the engine going. Any donations are greatly appreciated.
+
+You can leave donations at https://www.paypal.com/donate?hosted_button_id=6EA6SGLMSN5UJ
